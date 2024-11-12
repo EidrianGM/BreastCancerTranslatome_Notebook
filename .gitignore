@@ -1,0 +1,26 @@
+# Ignore Obsidian system and configuration files
+.obsidian/  
+
+# Ignore OS-specific files
+.DS_Store  # macOS Finder metadata
+Thumbs.db  # Windows thumbnail cache
+desktop.ini  # Windows desktop settings
+
+# Ignore backup and temporary files
+*.bak      # Common backup file extension
+*.tmp      # Temporary files
+*.swp      # Vim swap files (if you edit markdown with Vim)
+*.log      # Log files
+
+# Ignore Obsidian publish and custom plugin folders, if present
+.obsidian/plugins/
+.obsidian/themes/
+.obsidian/workspace
+
+# Optional: Ignore Obsidian Sync conflict files, if you're using it
+*.conflict
+
+
+Lab Data Analysis Instructions.md
+
+background/classic_Thesis_Johannes_Ristau.pdf
