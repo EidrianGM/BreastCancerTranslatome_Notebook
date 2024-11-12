@@ -36,9 +36,33 @@
 	* This model is challenged by only partial loss of silencing when 4E-T is depleted 
 * Moreover, DDX6 has been shown to not associate with miRNA targeted transcripts in a transcriptome-wide study, as opposed to loss of DDX6 in embryonic stem cells leading to up-regulation of miRNA targeted transcripts
 
-## RNA Binding Proteins
-* *
+## RNA Binding Proteins (RBPs)
+*  Cis-elements consisting in short (3-8nts) and repeated sequence motifs as hubs for RBPs
+* Diversified in mRNAs by alternative cleavage and polyadenylation of 3’UTRs. Often tissue-specific, leading to several 3’UTR variants of the same mRNA
+* ARE elements
+	* AU-rich
+	* found in transcripts encoding for short-lived factors such as oncogenes, growth factors and cytokines
+	* role in mRNA stability or translational regulation
+	* Some ARE - RBPs of translational regulation:
+		* **HuR** stabilize ARE-containing mRNAs by inhibiting the recruitment of the exosome complex to the mRNA
+		* **TTP** destabilizes mRNAs by recruiting the exosome also shown to be a translational repressor by recruiting 4EHP, a cap-binding protein competing with eIF4E
+		* **HuD** induces cap-dependent mRNA translation, thought to bind the polyA-tail and eIF4A in the closed loop formation
+		* Drosophila examples:
+			* Bicoid binds to a 3’UTR motif of the caudal mRNA and to 4EHP to repress translation
+			* Cup, another eIF4E-binding protein, represses translation of the oskar mRNA via the 3’UTR-binding protein Bruno
+			* To compensate the expression of X-chromosomal linked genes RBP Sxl binding to uridine-rich sequences in both 3' and 5' UTRs of the msl2 mRNA and inhibiting translation independent of 5’cap and polyA-tail, while impairing scanning by the 43S PIC
+		* Xenopus examples:
+			* CPEB, which binds to the CPE motif in 3’UTRs regulating their translation, associates with eIF4E through Maskin leading to translational repression similar to the mechanism of Cup in Drosophila
+		* Other translation initiation down regulation is by inhibited association of the 43S PIC mediated by the GAIT-complex. The 3’UTR of the ceruloplasmin mRNA is bound by a multimeric complex, induced by interferon-γ, consisting of the ribosomal protein L13a including GAPDH, NS-associated protein 1 and Glu-Pro-tRNA-synthetase. This complex blocks interaction of eIF3 with eIF4G and impairs binding of the 43S PIC leading to decreased translation initiation despite a formation of the closed loop between PABP and eIF4G
 
-
-
-
+## mRNA localization and transport
+*  Mediated by RBPs into complexes of mRNA and protein – messenger ribonucleoproteins -> mRNPs
+* mRNPs complexes are transported to cellular compartments by associating with motor proteins. 
+	* Drosophila oocyte Oskar mRNA. Required to be translationally repressed by Bruno  and localized by microtubules through interactions with tropomyosin, Staufen and components of the exon junction complex (EJC)
+* Mammalian cells mRNAs are transported via Zipcode-binding protein 1, binding to zipcode sequences in the 3’UTR. See the transport of beta-actin mRNA facilitated by KIF11, a motor-protein associated with tubulin
+* Aggregation of translationally silent mRNAs considered responses to cellular stress:
+	* Stress granules (SG)
+		* associated with translational inhibition upon cellular stresses by phosphorylation of eIF2α. characterized by translation initiation factors
+		* these have polyA-tails and can resume being translated
+	* Processing-bodies (P-bodies)
+		* linked to mRNA-silencing and decay, since the exonuclease XRN1 and silencing factors such as GW182, CCR4-NOT and Ago co-localize with these granules and mRNAs lack polyA-tails

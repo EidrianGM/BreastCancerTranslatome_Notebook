@@ -29,3 +29,5 @@
 	* High or low %GC ?
 * "TOP-mRNA translation is highly dependent on activity of mTORC1, moreover as depletion of amino acids leads to mTORC1 inactivation, reduced activity of S6K and rpS6 phosphorylation. Subsequently it was shown that alterations of S6K and P-rpS6 do not impact TOP-mRNA translation"
 	* But if TOP-mRNA depends on mTORC1, but its inactivation does not impact TOP-mRNA translation there is something that I missing right? 
+* "This revealed that, given that each amino acid can be decoded by several codons, expression level of tRNAs correlates with the frequency of codons in mRNAs in bacteria and unicellular eukaryotes"
+	* Is there also correlation between aminoacids usage and tRNAs expression level? 
