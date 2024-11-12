@@ -35,3 +35,10 @@
 * Potentially, DDX6 represses translation via binding to 4E-T, a transport protein of eIF4E, which in turn competes for the interaction with eIF4G disrupting the eIF4E-eIF4G binding
 	* This model is challenged by only partial loss of silencing when 4E-T is depleted 
 * Moreover, DDX6 has been shown to not associate with miRNA targeted transcripts in a transcriptome-wide study, as opposed to loss of DDX6 in embryonic stem cells leading to up-regulation of miRNA targeted transcripts
+
+## RNA Binding Proteins
+* *
+
+
+
+
