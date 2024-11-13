@@ -3,3 +3,4 @@
 - Do chromatin state is related with abundance of RNA in cell? Given the fact that RNA abundance allows histones solubility. See work of Marianne Farnedo.
 * Are ASOs derived from uORFs? siRNAs?
 * BRCA2 does not work when treated with ASOs?
+* Translational efficiencies, translatome, polysome-associated? All are referred to the same phenomena?

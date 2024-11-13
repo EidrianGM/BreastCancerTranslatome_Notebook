@@ -11,9 +11,12 @@ Steps:
 			* DB and Score
 				* M-Score -> z-score average
 					* Requieres the gene sets annotations / pathway to be co-expressed or use dissectDB()
+					* Not influenced by sample size
 				* GSVA
 					* It might do no require dissectDB()
-				* Rank based
+					* Influenced by sample size and missing value
+					* Better to integrate different datasets
+				* Rank based -> not reccommended
 					* SSGSEA and Sign Score
 						* Fail with activators and inhibitor genes, better use dissectDB()
 2. Perform clustering

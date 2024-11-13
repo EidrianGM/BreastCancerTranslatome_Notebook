@@ -1,0 +1,2 @@
+* Why do you use “calcNormFactors” and “voom” functions of edgeR (v.3.34.1) and limma (v.3.48.3) instead of DESeq2 pipeline?
+* Why do you use two different R's package cola versions 2.10 and 2.19 ? and why for different things ?
