@@ -10,4 +10,3 @@
 	* Protein degradation
 * Several studies show that mRNA and protein levels correlate imperfectly
 	* In contrast to context-dependent studies that claim protein-levels being mainly explained by mRNA levels
-* Proteome
