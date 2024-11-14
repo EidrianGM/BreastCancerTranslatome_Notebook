@@ -82,6 +82,42 @@ Inci S. Aksoylu paper -> **Transcriptome-wide alterations in mRNA translation de
 	* Normalisation
 		* affy::rma (v.1.70.0)
 		* log2-transformation -> biobase::exprs
-	* Multivariate linear regression models application
+	* Multivariate linear regression models application per gene and per replicate one sample at a time
 		* What are the covariates here?
-	* 
+#### Analysis of gene signatures in patients and cell lines human breast cancer
+* Link between alterations in mRNA translation and upstream regulators by: 
+	* Empirical cumulative distribution functions
+		* To test signatures in each patient, i.e. translationally regulated gene sets
+		* Gene set activity is understood as the shift of residuals for each regulated gene set relative to background genes at the 50th quantile
+		* The significance of the shift was determined using the Wilcoxon rank sum test
+		* Activities in patient groups were asssesed by calculating mean per-gene residuals across patients within a subtype and then the shift and statistics relative to the background
+#### Comparison of mRNA translation between patients and cancer cell lines
+
+* Compare of translatome state in subtypes to cell lines:
+	* cola::predict_classes (v.2.10.0, set.seed(123))
+		* Parameters: 
+			* nperm=100, dist_method=”correlation”
+		* Data:
+			* input is a scaled matrix prepared by calculating per-gene mean residual of 3 replicates from each triple-negative breast cancer cell line
+				* ::scale (Parameters: center = F)
+#### Identification of mRNA features associated with translation patterns in breast cancer subtypes
+
+* Anota2seqUtils::featureIntegration
+	* Input
+		* per-gene mean residuals calculated across patients within a subtype
+	* Three-step workflow:
+		* Selection for each patients subgroup, two sets of 500 genes, the  most translationaly disregulated, most activated and most suppressed. 
+		* These 1000 genes are tested for: 
+			* 5’UTR features
+				* GC content 
+				* length 
+				* G-quadruplexes (identified by pqs finder) 
+				* presence of uORFs with strong Kozak context
+				* presence of RBP-motifs annotated in ATtRACT database 
+				* folding energy calculated by Mfold algorithm  
+			* CDS features
+				* codon usage
+				* dicodon usage
+				* amino-acid usage
+	* EffScore and EffScore Adjusted calculation
+		*  Measure the translation regulatory element effect
