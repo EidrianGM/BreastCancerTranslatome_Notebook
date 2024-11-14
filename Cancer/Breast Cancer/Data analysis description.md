@@ -2,12 +2,13 @@ Inci S. Aksoylu paper -> **Transcriptome-wide alterations in mRNA translation de
 
 ## Data source
 * From: A.C. Camargo Cancer Center biobank (Sao Paulo, Brazil)
-	* Two cohorts of breast cancer patients (n=165)
-		* I - 135
-		* II - 30
+	* Two cohorts of primary non-treated breast cancer patients  (n=165)
+		* I - 135 - all molecular sub-types
+		* II - 30 - triple-negative 
 ## Methods
 #### Experimental
-* Polysome-profiling optimized for small samples 
+* Polysome-profiling optimized for small samples
+	* mRNAs associated to > 3 ribosomes
 * Single-end libraries prepared following the Smart-Seq2 protocol
 	* Illumina HiSeq2500
 		* 50 base single-end reads
@@ -121,3 +122,4 @@ Inci S. Aksoylu paper -> **Transcriptome-wide alterations in mRNA translation de
 				* amino-acid usage
 	* EffScore and EffScore Adjusted calculation
 		*  Measure the translation regulatory element effect
+
