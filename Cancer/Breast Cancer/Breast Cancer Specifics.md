@@ -53,3 +53,6 @@
 		    - Tumors are enriched with genes associated with EMT and stem cell-like characteristics.
 		    - There is ongoing research into targeted therapies that can disrupt these pathways.
 
+## Breast Cancer Cell Lines
+* MDA-MB-231
+* 
