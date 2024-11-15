@@ -11,6 +11,7 @@ desktop.ini  # Windows desktop settings
 *.tmp      # Temporary files
 *.swp      # Vim swap files (if you edit markdown with Vim)
 *.log      # Log files
+*.pdf
 
 # Ignore Obsidian publish and custom plugin folders, if present
 .obsidian/plugins/
@@ -22,8 +23,4 @@ desktop.ini  # Windows desktop settings
 
 
 Lab Data Analysis Instructions.md
-
-background/classic_Thesis_Johannes_Ristau.pdf
-
-Cancer/Breast Cancer/Thesis_Inci_Aksoylu.pdf
 Cancer/Breast Cancer/Pathmed Approach/pathMED

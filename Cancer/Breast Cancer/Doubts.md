@@ -4,4 +4,11 @@
 * Have you considered studying also the Lehmann classification for TNBCtype, refined to TNBCtype-4? 
 * About Figure 1. C. What we see there is the classification in breast cancer subtypes according to the two omics data, but the real distribution of samples clinical classification matches?
 * Should sequencing biases be included in the multiple linear regression-approach to calculate per-gene translation for each patient (Figure 2. A-B)? 
-* How did you decide the 4 gene modules that identify the different subgroups (Figure 3 A)? 
+* How did you decide that there are 4 gene modules that identify the different subgroups (Figure 3 A)? 
+* What is considered the activity of a upstream regulator?
+* Are really cell abundances controlled? Did you plot the predicted abundances in the heatmaps?
+* Why directly correlating the 1st cohort classification with cohort 2 and cell lines instead of applying first the stratification workflow?  
+* Does it makes sense to use anota2seqUtils in the total mRNA ? To compare background results versus translatome results in a per patient o subtype fashion?
+* What does the red colour intensity means in Figure S4?
+* Genes with increased translational efficiency ? Are these genes simply those with z-score > 1? 
+* 

@@ -44,7 +44,8 @@ Inci S. Aksoylu paper -> **Transcriptome-wide alterations in mRNA translation de
 * Linear regression models correlating total cytosolic and polysome-associated mRNA levels
 * Removal of confounding factors
 	* Cell composition
-		* CIBERSORTx in “absolute mode” using cell types signatures included in the built-in LM22 matrix and single cell signatures derived from human cell breast cancers
+		* CIBERSORTx in “absolute mode” using cell types signatures included in the built-in LM22 matrix and single cell signatures derived from human cell breast cancers. Specially immune cells and CAFs.
+		* Still this not assures that the translation phenomena detected is found in cancer cells -> use of in vitro
 	* Clinical variables
 	* Univariate and multivariate regression models
 		* To identify the significant associations between confounding factors and alterations in polysome mRNA levels
