@@ -61,9 +61,8 @@ install.packages("gsl", configure.args = c(
 
 
 ```bash
-##### SECOND WAY OF INSTALLING
-
-##### System Installation
+# SECOND WAY OF INSTALLING
+## System Installation
 export PREFIX
 export PREFIX=~/.local/mylib
 export PREFIX=~/.local/mylib/$rpmNAME
@@ -77,20 +76,24 @@ cd gsl-*
 make 
 make install
 
+## Check if installed
 /home/adrian.garcia/.local/mylib/libgsl/bin/gsl-config --version
 
-##### Add Path to .bash_profile
-
+## Add Path to .bash_profile
 export PATH=~/local/libgsl/bin:$PATH
 export LD_LIBRARY_PATH=~/.local/mylib/libgsl/lib:$LD_LIBRARY_PATH
 
 source ~/.bash_profile
 
-Sys.setenv(LD_LIBRARY_PATH = "/home/adrian.garcia//.local/mylib/libgsl/lib")
+```
+
+```R
+# Further stepts in R
 install.packages("gsl", configure.vars = "GSL_CONFIG=/home/adrian.garcia/.local/mylib/libgsl/bin/gsl-config")
 
-## check in R
+Sys.setenv(LD_LIBRARY_PATH = "/home/adrian.garcia/.local/mylib/libgsl/lib")
 
+## check in R
 Sys.setenv(LD_LIBRARY_PATH = "/home/adrian.garcia/.local/mylib/libgsl/lib")
 install.packages("gsl", configure.vars = "GSL_CONFIG=/home/adrian.garcia/.local/mylib/libgsl/bin/gsl-config")
 
