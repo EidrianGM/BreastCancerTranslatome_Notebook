@@ -6,33 +6,29 @@
 export CUSTOMPATH=.local/mylib
 mkdir -p $HOME/$CUSTOMPATH
 export PREFIX=$HOME$CUSTOMPATH
-# 0.1 Temporarily set variables
-export PATH=$PREFIX/bin:$PATH 
-export LD_LIBRARY_PATH=$PREFIX/lib:$LD_LIBRARY_PATH 
-export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig:$PKG_CONFIG_PATH 
-export CPATH=$PREFIX/include:$CPATH
-
+export PACKNAME="libgsl"
 
 # 1. Download
+cd ~/$CUSTOMPATH/downloads/
+wget https://ftp.gnu.org/gnu/gsl/gsl-latest.tar.gz
+tar -xvzf gsl-latest.tar.gz
+cd gsl-*
 
-
-
+# 2. Install
+./configure --prefix=$PREFIX/$PACKNAME
+make 
+make install
 ```
 
 
 ```R
-system("export CUSTOMPATH=.local/mylib;mkdir -p $HOME/$CUSTOMPATH;export PREFIX=$HOME$CUSTOMPATH")
-system('echo "$PREFIX"')
+Sys.setenv(LD_LIBRARY_PATH = "/home/adrian.garcia/.local/mylib/libgsl/lib", PATH = Sys.getenv("PATH"))
 
-install.packages("gsl", configure.vars = "GSL_CONFIG=/home/adrian.garcia/.local/mylib/libgsl/bin/gsl-config")
+## add to .Rprofile 
+Sys.setenv(LD_LIBRARY_PATH = paste0("/home/adrian.garcia/.local/mylib/libgsl/lib:",Sys.getenv("LD_LIBRARY_PATH")), PATH = Sys.getenv("PATH"))
 
-R CMD INSTALL gsl --configure-vars="CPPFLAGS=-I$PREFIX/include LDFLAGS=-L$PREFIX/lib"
 
-# R CMD INSTALL gsl --configure-vars="CPPFLAGS=-I$PREFIX/include LDFLAGS=-L$PREFIX/lib"
-
+install.packages("gsl", configure.vars = "GSL_CONFIG=/home/adrian.garcia/.local/mylib/libgsl/bin/gsl-config CPPFLAGS=-I/home/adrian.garcia/.local/mylib/libgsl/include LDFLAGS=-L/home/adrian.garcia/.local/mylib/libgsl/lib")
 ```
 
-
-
-
-~/.local/mylib/libgsl/include/gsl/
+```
