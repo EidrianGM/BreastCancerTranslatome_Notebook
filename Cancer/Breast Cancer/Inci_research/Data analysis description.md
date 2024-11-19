@@ -27,8 +27,11 @@ Inci S. Aksoylu paper -> **Transcriptome-wide alterations in mRNA translation de
 	* Parameters: 
 		* isPairedEnd = allowMultiOverlap = countMultiMappingReads = FALSE
 * Filtering:
-	* samples with fewer than 2.5 million reads
-	* genes with 0 mapped RNA sequencing read in one or more samples 
+	* samples:
+		* with fewer than 2.5 million reads
+		* 
+	* genes:
+		* with 0 mapped RNA sequencing read in one or more samples 
 * Counts normalization:
 	* TMM-Log2 by “calcNormFactors” and “voom” functions of edgeR (v.3.34.1) and limma (v.3.48.3)
 * PCA on TMM-Log2 counts:

@@ -11,4 +11,12 @@
 * Does it makes sense to use anota2seqUtils in the total mRNA ? To compare background results versus translatome results in a per patient o subtype fashion?
 * What does the red colour intensity means in Figure S4?
 * Genes with increased translational efficiency ? Are these genes simply those with z-score > 1? 
-* 
+
+## About IA_Script1
+
+* Where are the quality control steps before applying preprocess_data() ??
+	* I actually did PCA and I removed samples that had no data for one library type or that switched the direction…
+* In the samples passed to filterExtraSample in function preprocess_data(), there are a set of samples that have been removed?
+	* Why?
+	* What is it with M 445T and M 445 T samples ?
+* Why are we applying voom normalization?
