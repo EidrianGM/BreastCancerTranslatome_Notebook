@@ -28,8 +28,8 @@ Inci S. Aksoylu paper -> **Transcriptome-wide alterations in mRNA translation de
 		* isPairedEnd = allowMultiOverlap = countMultiMappingReads = FALSE
 * Filtering:
 	* samples:
+		* in case of only a sample total or polysome mRNA not passing the filter both mRNA data must be removed. Analysis is always paired total and polysome mRNA must be available for each sample after QC.
 		* with fewer than 2.5 million reads
-		* 
 	* genes:
 		* with 0 mapped RNA sequencing read in one or more samples 
 * Counts normalization:
