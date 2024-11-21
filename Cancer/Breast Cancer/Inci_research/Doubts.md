@@ -26,4 +26,6 @@
 
 ## About /Data information
 
-
+### Normalisation 
+- Should it be done by cohort / sequencing batch?
+- Should it be done separating by type of omic data, Polysome vs Total? 
