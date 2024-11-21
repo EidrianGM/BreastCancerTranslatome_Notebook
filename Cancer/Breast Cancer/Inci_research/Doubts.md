@@ -22,4 +22,8 @@
 * In the samples passed to filterExtraSample in function preprocess_data(), there are a set of samples that have been removed?
 	* Why?
 	* What is it with M 445T and M 445 T samples ?
-* Why are we applying voom normalization?
+* Why are we applying voom normalization?''
+
+## About /Data information
+
+
