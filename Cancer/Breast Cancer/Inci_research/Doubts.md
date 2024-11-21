@@ -14,6 +14,9 @@
 
 ## About IA_Script1
 
+* About the initial data in annotation_bcVivo_allSeqs.txt and merged_gene_counts.txt ?
+	* The number of samples described in Fig 1. B does not match with what is in these files:
+		* 
 * Where are the quality control steps before applying preprocess_data() ??
 	* I actually did PCA and I removed samples that had no data for one library type or that switched the direction…
 * In the samples passed to filterExtraSample in function preprocess_data(), there are a set of samples that have been removed?
