@@ -12,7 +12,7 @@
 * What does the red colour intensity means in Figure S4?
 * Genes with increased translational efficiency ? Are these genes simply those with z-score > 1? 
 
-## About IA_Script1
+## About IA_Script1 - Cohort 1 analysis
 
 * About the initial data in annotation_bcVivo_allSeqs.txt and merged_gene_counts.txt ?
 	* The number of samples described in Fig 1. B does not match with what is in these files:
@@ -24,7 +24,10 @@
 	* What is it with M 445T and M 445 T samples ?
 * Why are we applying voom normalization?''
 
-## About /Data information
+## About IA_Script4 - Cell Lines analysis
+
+
+## General About/Data information
 
 ### Normalisation 
 - Should it be done by cohort / sequencing batch?
