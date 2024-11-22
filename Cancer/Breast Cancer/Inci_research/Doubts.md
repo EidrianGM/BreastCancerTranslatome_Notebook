@@ -27,6 +27,9 @@
 ## About IA_Script4 - Cell Lines analysis
 
 
+* Data comes from 20220426_breastCancerCellLines.Rdata and it is supposed to be already normalised.
+	* I see that normalisation is done before collapsing replicates, does that makes sense?
+	* If they are technical replicates we can simply do an average and then normalise.
 ## General About/Data information
 
 ### Normalisation 
