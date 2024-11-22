@@ -29,3 +29,8 @@
 ### Normalisation 
 - Should it be done by cohort / sequencing batch?
 - Should it be done separating by type of omic data, Polysome vs Total? 
+- Inci's function normalizeData() 
+	- All genes in which at least one sample has 0 reads is excluded
+		- In other words, only genes with reads in all samples are used
+	- Isn't it a bit extreme? Isn't it might be interesting to filter genes based on variance instead? Or to remove only the genes that have no read in at least a specific number of samples?
+
