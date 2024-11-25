@@ -10,6 +10,14 @@
 	- [ ] Read
 	- [ ] In NotebookLM
 	- [ ] Discarded
-
-
+-  High _BRCA1_ gene expression increases the risk of early distant metastasis in ER+ breast cancers
+	- https://www.nature.com/articles/s41598-021-03471-w
+	- [ ] Read
+	- [ ] In NotebookLM
+	- [ ] Discarded
+- Expression and mutations of BRCA in breast cancer and ovarian cancer: Evidence from bioinformatics analyses
+	- https://www.spandidos-publications.com/10.3892/ijmm.2018.3870
+	- [ ] Read
+	- [ ] In NotebookLM
+	- [ ] Discarded
 ## Checked
