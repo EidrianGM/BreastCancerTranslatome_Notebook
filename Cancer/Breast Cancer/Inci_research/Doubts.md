@@ -15,17 +15,16 @@
 ## About IA_Script1 - Cohort 1 analysis
 
 * About the initial data in annotation_bcVivo_allSeqs.txt and merged_gene_counts.txt ?
-	* The number of samples described in Fig 1. B does not match with what is in these files:
-		* 
+	* The number of samples described in Fig 1. B does not match with what is in these files
 * Where are the quality control steps before applying preprocess_data() ??
 	* I actually did PCA and I removed samples that had no data for one library type or that switched the direction…
 * In the samples passed to filterExtraSample in function preprocess_data(), there are a set of samples that have been removed?
 	* Why?
-	* What is it with M 445T and M 445 T samples ?
-* Why are we applying voom normalization?''
+	* What is it with M 445T and M 445 T samples, are they different?
+* Why are we applying voom + tmm normalization?'
+* If cohort 1 and cohort 2 where sequenced together, shouldn't normalization be done together?
 
 ## About IA_Script4 - Cell Lines analysis
-
 
 * Data comes from 20220426_breastCancerCellLines.Rdata and it is supposed to be already normalised.
 	* I see that normalisation is done before collapsing replicates, does that makes sense?
