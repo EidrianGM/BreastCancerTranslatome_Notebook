@@ -24,13 +24,19 @@
 * Why are we applying voom + tmm normalization?'
 * Were cohort 1 and cohort 2 sequenced together?
 	* Should normalization be done together?
-	* 
+* About the Workflow:
+	* 1. Remove samples based on library size
+	* 2. Select cohort 1 data
+	* 3. Remove all genes not available in all samples
+	* 4. Normalise
+	* 5. Apply linear models with covariables and obtain final model
 
 ## About IA_Script4 - Cell Lines analysis
 
 * Data comes from 20220426_breastCancerCellLines.Rdata and it is supposed to be already normalised.
 	* I see that normalisation is done before collapsing replicates, does that makes sense?
 	* If they are technical replicates we can simply do an average and then normalise.
+
 ## General About/Data information
 
 ### Normalisation 
