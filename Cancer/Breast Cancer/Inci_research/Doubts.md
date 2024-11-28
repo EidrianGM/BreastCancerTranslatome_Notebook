@@ -22,7 +22,9 @@
 	* Why?
 	* What is it with M 445T and M 445 T samples, are they different?
 * Why are we applying voom + tmm normalization?'
-* If cohort 1 and cohort 2 where sequenced together, shouldn't normalization be done together?
+* Were cohort 1 and cohort 2 sequenced together?
+	* Should normalization be done together?
+	* 
 
 ## About IA_Script4 - Cell Lines analysis
 
