@@ -1,0 +1,13 @@
+## Linear Regression - R::lm()
+- Statistical model that analyzes the relationship between a response variable (often called y) and one or more variables and their interactions (often called x or explanatory variables)
+- Basic formula:
+	- Result | Expected | Target = Intercept + (Variable|Predictor) * Slope
+		- Intercept = base line measurement
+		- Variable | Predictor =  (~clinical, ~technical, ~cell populations, ...)
+		- Slope = measures the change of results according to variable
+- Assumption:
+	- Linear relationship between the response and the outcome
+	- In our context, figure out which variables explain the amount of mRNA being translated (~clinical, ~technical, ~cell populations, ...)
+- Results indexes / coefficients:
+	- Intercept and Variable
+	- R² = 

@@ -24,6 +24,16 @@
 * Why are we applying voom + tmm normalization?'
 * Were cohort 1 and cohort 2 sequenced together?
 	* Should normalization be done together?
+* About the lm() models
+	* Cell Types:
+		* 1st individually obtain which cell types are important
+		* 2nd "step wise regression" study the effect of combination of cell types:
+			* 1 - Type 1
+			* 2 - Type 1 + Type 2
+			* 3 - Type 1 + Type 2 + Type 3
+			* 4 - Type 1 + Type 2 + Type 3 + Type 4 
+			* ...
+			* Why not other type of combinations Type 1 + Type 4 ?
 * About the Workflow:
 	* 1. Remove samples based on library size
 	* 2. Select cohort 1 data
