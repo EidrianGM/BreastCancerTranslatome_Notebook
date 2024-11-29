@@ -28,6 +28,8 @@
 	* 1. Remove samples based on library size
 	* 2. Select cohort 1 data
 	* 3. Remove all genes not available in all samples
+		* Is more relevant to remove these genes?
+		* Or to remove samples that have 0 reads in key genes associated with breast cancer? 
 	* 4. Normalise
 	* 5. Apply linear models with covariables and obtain final model
 
@@ -46,4 +48,8 @@
 	- All genes in which at least one sample has 0 reads is excluded
 		- In other words, only genes with reads in all samples are used
 	- Isn't it a bit extreme? Isn't it might be interesting to filter genes based on variance instead? Or to remove only the genes that have no read in at least a specific number of samples?
-
+### Model
+* Linear models 
+	* Are used in Script 1, to calculate the residuals of of polysome data in cohort 1.
+	* We are with this assuming a linear relationship between the total amount of polysome associated mRNA with the rest of variables, i.e. total mRNA, cell abundances ...
+	* Can we calculate accuracy and similar metrics with these?

@@ -1,5 +1,16 @@
 ## To Check
 
+* Explainable Machine Learning Models Using Robust Cancer Biomarkers Identification from Paired Differential Gene Expression
+	* https://www.mdpi.com/1422-0067/25/22/12419
+	- [ ] Read
+	- [ ] In NotebookLM
+	- [ ] Discarded
+	- Idea: This paper methodology might work with our type of data, ask Elisa.
+* Crosstalk of RNA methylation writers defines tumor microenvironment and alisertib resistance in breast cancer
+	*https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2023.1166939/full
+	- [ ] Read
+	- [ ] In NotebookLM
+	- [ ] Discarded
 * Crosstalk of RNA methylation writers defines tumor microenvironment and alisertib resistance in breast cancer
 	*https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2023.1166939/full
 	- [ ] Read
