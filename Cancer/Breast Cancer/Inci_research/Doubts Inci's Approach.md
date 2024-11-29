@@ -27,13 +27,16 @@
 * About the lm() models
 	* Cell Types:
 		* 1st individually obtain which cell types are important
-		* 2nd "step wise regression" study the effect of combination of cell types:
+		* 2nd "step wise regression" study the addition effect of cell types:
 			* 1 - Type 1
 			* 2 - Type 1 + Type 2
 			* 3 - Type 1 + Type 2 + Type 3
 			* 4 - Type 1 + Type 2 + Type 3 + Type 4 
 			* ...
 			* Why not other type of combinations Type 1 + Type 4 ?
+			* I am not sure if this is even well applied:
+				* See step wise regression in [my ML methods notes](obsidian://open?vault=Breast%20Cancer%20Translatome&file=Background%2FMachine%20Learning%20and%20IA%20Models%20Notes)
+			* Only Adj.Pvalues are used to select variables.
 * About the Workflow:
 	* 1. Remove samples based on library size
 	* 2. Select cohort 1 data
