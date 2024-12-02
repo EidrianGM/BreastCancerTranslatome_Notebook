@@ -37,6 +37,7 @@
 			* I am not sure if this is even well applied:
 				* See step wise regression in [my ML methods notes](obsidian://open?vault=Breast%20Cancer%20Translatome&file=Background%2FMachine%20Learning%20and%20IA%20Models%20Notes)
 			* Only Adj.Pvalues are used to select variables.
+	* We apply lm() to each gene separately but at the end the same model is used globally to all genes, which implies that all genes are affected by the same set of variables.Should this be like this?
 * About the Workflow:
 	* 1. Remove samples based on library size
 	* 2. Select cohort 1 data
