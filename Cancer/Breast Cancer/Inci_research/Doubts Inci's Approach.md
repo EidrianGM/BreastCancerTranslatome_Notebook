@@ -23,7 +23,7 @@
 * In the samples passed to filterExtraSample in function preprocess_data(), there are a set of samples that have been removed?
 	* Why?
 	* What is it with M 445T and M 445 T samples, are they different?
-* Why are we applying voom + tmm normalization?'
+* Why are we applying voom + tmm normalization instead of DESEq2?
 * Were cohort 1 and cohort 2 sequenced together?
 	* Should normalization be done together?
 * About the lm() models
@@ -67,5 +67,8 @@
 ### Model
 * Linear models 
 	* Are used in Script 1, to calculate the residuals of of polysome data in cohort 1.
-	* We are with this assuming a linear relationship between the total amount of polysome associated mRNA with the rest of variables, i.e. total mRNA, cell abundances ...
+	* We are applying this assuming a linear relationship between the total amount of polysome associated mRNA with the rest of variables, i.e. total mRNA, cell abundances ...
 	* Can we calculate accuracy and similar metrics with these?
+	* The cell lines selected by univariate model are all the available?
+		* But I guess this is normal, because what Script 1 does is to select any cell line that is significantly associated with the lm() in at least one gene... But shouldn't we actually be selecting the set of cell lines that explain best a majority of genes? or a model per gene?
+		* 
