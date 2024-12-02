@@ -11,6 +11,8 @@
 * Does it makes sense to use anota2seqUtils in the total mRNA ? To compare background results versus translatome results in a per patient o subtype fashion?
 * What does the red colour intensity means in Figure S4?
 * Genes with increased translational efficiency ? Are these genes simply those with z-score > 1? 
+* Does samples cluster based on proportion of cells?
+	* Add proportion of cells in the heatmap
 
 ## About IA_Script1 - Cohort 1 analysis
 
