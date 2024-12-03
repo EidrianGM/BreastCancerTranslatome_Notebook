@@ -1,4 +1,4 @@
-## Linear Regression - R::lm()
+## Linear Regressions
 - Statistical model that analyzes the relationship between a response variable (often called y) and one or more variables and their interactions (often called x or explanatory variables)
 - When a regression takes into account two or more predictors to create the linear regression, it’s called multiple linear regression.
 - Basic formula:
@@ -7,14 +7,20 @@
 		- Variable | Predictor =  (~clinical, ~technical, ~cell populations, ...)
 		- Slope = measures the change of results according to variable
 - Assumption:
-	- Linear relationship between the response and the outcome
+### Assumptions:
+In order to interpret the results of the regression analysis meaningfully, certain conditions must be met.
+- **Linearity:** There must be a linear relationship between the dependent and independent variables.
+- **Homoscedasticity:** The residuals must have a constant variance.
+- **Normality:** Normally distributed error
+- **No multicollinearity:** No high correlation between the independent variables
+- **No auto-correlation:** The error component should have no auto correlation
 	- In our context, figure out which variables explain the amount of mRNA being translated (~clinical, ~technical, ~cell populations, ...)
-- Results indexes / coefficients:
-	- Intercept 
-		- The base line for our target prediction
-	- Variable (the slope)
+#### Results indexes / coefficients:
+- Intercept 
+- The base line for our target prediction
+- Variable (the slope)
 		- In our case if the variable slope is positive or negative, indicates positive or negative correlation or regulation
-	- Residuals
+- Residuals
 		- Show the differences between the real values and the predicted values. The idea here is that the sum of the residuals is approximately zero or as low as possible. In real life, most cases will not follow a perfectly straight line, so residuals are expected.
 - Model Fit Testing
 	- R² (coefficient of determination)
@@ -27,13 +33,14 @@
 			- One problem is that it cannot decrease as you add more independent variables to your model, it will continue increasing as you make the model more complex, even if these variables don’t add anything to your predictions. 
 	- R² Adjusted - for multiple variable models 
 		- It only increases if the model reduces the overall error of the predictions.
-	- Plot the Residuals
-		```r
-		lmTemp = lm(Pressure~Temperature, data = pressure) 
-		plot(pressure, pch = 16, col = "blue") #Plot the results
-		abline(lmTemp) #Add a regression line
-		```
-		* Ideally, when you plot the residuals, they should look random. Otherwise means that maybe there is a hidden pattern that the linear model is not considering. To plot the residuals, use the command `plot(lmTemp$residuals)`
+### R::lm()
+- Plot the Residuals
+```r
+	lmTemp = lm(Pressure~Temperature, data = pressure) 
+	plot(pressure, pch = 16, col = "blue") #Plot the results
+	abline(lmTemp) #Add a regression line
+```
+* Ideally, when you plot the residuals, they should look random. Otherwise means that maybe there is a hidden pattern that the linear model is not considering. To plot the residuals, use the command `plot(lmTemp$residuals)`
 		* This can be a problem. If you have more data, your simple linear model will not be able to generalize well. In the previous picture, notice that there is a pattern (like a curve on the residuals). This is not random at all. 
 			* What you can do is a transformation of the variable. Many possible transformations can be performed on your data, such as adding a quadratic term (x²), a cubic (x³), or even more complex such as ln(X), ln(X+1), sqrt(X), 1/x, Exp(X). The choice of the correct transformation will come with some knowledge of algebraic functions, practice, trial, and error. You can apply this directly to the model calculation. Create a linear regression with a quadratic coefficient:
 				`lmTemp2 = lm(Pressure~Temperature + I(Temperature^2), data = pressure)`
