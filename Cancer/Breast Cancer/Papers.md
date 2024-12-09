@@ -31,4 +31,9 @@
 	- [ ] Read
 	- [ ] In NotebookLM
 	- [ ] Discarded
+- Massively Parallel Polyribosome Profiling Reveals Translation Defects of Human Disease-Relevant UTR Mutations
+	- https://www.biorxiv.org/content/10.1101/2024.04.11.589132v1.full
+	- [ ] Read
+	- [ ] In NotebookLM
+	- [ ] Discarded
 ## Checked
