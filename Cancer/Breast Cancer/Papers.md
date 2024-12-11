@@ -36,4 +36,19 @@
 	- [ ] Read
 	- [ ] In NotebookLM
 	- [ ] Discarded
+- A Review on Variable Selection in Regression Analysis
+	- https://www.mdpi.com/2225-1146/6/4/45
+	- [ ] Read
+	- [ ] In NotebookLM
+	- [ ] Discarded
+- mTOR-sensitive translation: Cleared fog reveals more trees
+	- https://pubmed.ncbi.nlm.nih.gov/28277937/
+	- [ ] Read
+	- [ ] In NotebookLM
+	- [ ] Discarded
+- Translational control of immune responses: from transcripts to translatomes
+	- https://www.nature.com/articles/ni.2891
+	- [ ] Read
+	- [ ] In NotebookLM
+	- [ ] Discarded
 ## Checked
