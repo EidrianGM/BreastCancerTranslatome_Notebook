@@ -1,5 +1,6 @@
 Inci S. Aksoylu paper -> **Transcriptome-wide alterations in mRNA translation define breast cancer subtypes**
 
+* Remove the RAMP sequence?
 ## Data source
 * From: A.C. Camargo Cancer Center biobank (Sao Paulo, Brazil)
 	* Two cohorts of primary non-treated breast cancer patients  (n=165)
