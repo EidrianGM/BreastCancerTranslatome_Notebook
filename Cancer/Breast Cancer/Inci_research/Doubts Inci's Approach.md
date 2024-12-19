@@ -52,6 +52,8 @@
 		* Or to remove samples that have 0 reads in key genes associated with breast cancer? 
 	* 4. Normalise
 	* 5. Apply linear models with covariables and obtain final model
+* Shouldn't we divide the cohort 1 into train and test datasets?
+* 
 
 ## About IA_Script4 - Cell Lines analysis
 
