@@ -1,5 +1,57 @@
 - Chemical Manufacturing Process example dataset is very similar to my own data type
-- 
+### Common Workflow
+#### 1. Data Pre-processing
+* Data transformations
+* Variables selection (adding or removing)
+* Binning continuous variables
+#### 2. Resampling
+* Data spending
+	* Tune a model
+	* Assess its performance
+#### 3. Model selection
+#### 3.1. Classification of Predictive Models
+* Regression -> Predicting continuous variables by
+	* Linear combination of predictors
+		* Linear regression
+		* Partial least squares 
+		* L1 regularization
+	* Not based on linear combinations of predictors
+		* Neural networks
+		* Multivariate adaptive regression splines (MARS)
+			* Limitation: 
+				* Define the tuning parameter for the equation that determine the number of  different linear models or segments 
+		* Support vector machines (SVMs)
+		* KNNs
+		* Tree-based (ensembl methods)
+			* Regression trees
+			* Bagged trees
+			* Random forests
+			* Boosting
+			* Cubist
+* Classification -> Predicting categorical variables
+	* Linear combination of predictors
+		* Linear
+		* Quadratic (curves in y~x)
+		* Regularized
+		* Partial least squares discriminant analysis
+		* Penalized methods
+	* Not based on linear combinations of predictors (highly)
+		* Neural networks
+		* SVMs
+		* KNNs
+		* Naı̈ve Bayes
+		* Nearest shrunken centroids
+		* Tree-based
+#### 4. Feature selection methods
+
+#### 5. Model Evaluation
+* Resampling (or cross-validation)
+	* Different subversions of the training data set are used to fit and evaluate the model
+*  Regression
+	* Root mean squared error (RMSE)
+		* interpreted as how far, on average, the residuals are from zero
+* Classification
+
 #### Data splitting Train and Test and Model Selection
 * Relationship between the number of samples (n) and number of predictors (P)
 	* High n - low P (n > P)
@@ -20,6 +72,14 @@
 		* Categorical: balanced or unbalanced
 	* Underlying relationship with response
 		* Yes or No?
+* Splitting into train and test
+	* Extrapolating
+		* Using different populations or cohorts 
+	* Interpolating
+		* We pick random subsets:
+			* A small test would have limited utility as a judge of performance. In this case, a sole reliance on resampling techniques (i.e.,no test set) might be more effective. 
+			* Large data sets reduce the criticality of these decisions
+
 ### Model Selection
 * Partial Least Squares
 	* Naturally manages correlated predictors but is numerically more stable if the predictors are on similar scales/magnitudes (due to SVD calculations, for example, a predictor with values in the thousands might overshadow another predictor in the range of 0 to 1)

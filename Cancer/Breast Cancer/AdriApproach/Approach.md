@@ -56,6 +56,7 @@ Depends greatly on the type of data
 |                         |                   |                                 |
 | **Response variable**   | **Polysome mRNA** | **BC Molecular Classification** |
 | Type (Categ. or Cont.)  | Continuous        | Categorical                     |
+| Model type              | Regression        | Classification                  |
 | Balanced/Symmetric      | ?                 | ?                               |
 | Unbalanced/Skewed       | ?                 | ?                               |
 | Independet              | ?                 | ?                               |
