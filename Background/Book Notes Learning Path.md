@@ -3,14 +3,36 @@
 #### 1. Data Pre-processing
 * Addition or deletion of data points
 	* Removal of outliers samples and skewed variables
-	* Skewness assesment
-		* An un-skewed distribution is one that is roughly symmetric. This means that the probability of falling on either side of the distribution’s mean is roughly equal. 
 * Data transformations and combinations | Feature engineering
 	* Data encoding -> different ways to express a data, i.e. date formats
-	* Relationship between predictor and response
-		* If outcome depends on season or month, day in 365 format or month is better that month day format.
+		* Relationship between predictor and response
+			* If outcome depends on season or month, day in 365 format or month is better that month day format.
 	* Centering by subtracting the average predictor value   from all its values to obtain a zero mean
 	* Scaling the data each value of the predictor variable is divided by its standard deviation coercing the data to have a common standard deviation of one.
+	*  Skewness assessment
+		* An un-skewed distribution is one that is roughly symmetric. This means that the probability of falling on either side of the distribution’s mean is roughly equal. 
+		* A general rule of thumb to consider is that skewed data whose ratio of the highest value to the lowest value is greater than 20 have significant skewness. 
+		* The skewness statistic can be used as a diagnostic. If the predictor distribution is roughly symmetric, the skewness values will be close to zero.
+		* Replacing the data with the log, square root, or inverse may help to remove the skew. Box and Cox family of transformations indexed by a parameter, denoted as λ estimated using maximum likelihood. This procedure would be applied independently to each predictor data that contain values greater than zero.
+	* Data Transformations for Multiple Predictors
+		* Resolve outliers
+			* Samples that are exceptionally far from the mainstream of the data
+				* If a model is sensitive to outliers, one data transformation, after centering and scaling, predictor data that can minimize the problem is the spatial sign. Removing predictor variables after applying the spatial sign transformation may be problematic.
+			* Predictive models that are resistant to outliers:
+				* Tree-based classification
+				* SVM
+				* 
+		* Dimension reduction (signal extraction or feature extraction)
+			* PCA (unsupervised)
+				* Seek linear combination of predictors that maximize variability
+				* With the great advantage that creates components uncorrelated
+				* Drawn to summarize predictors that have more variation to lower variation. 
+				* Thus different scales and units, will cause variables of high magnitudes be summarized in initial PCs.
+					* It means that PCA will be focusing its efforts on identifying the data structure based on measurement scales rather than based on the important relationships within the data for the current problem.
+					* to help PCA avoid summarizing distributional differences and predictor scale information, it is best to first transform skewed predictors and center and scale the predictors
+				* Scree plot to decide the number of PC to retain based on the number prior to the tapering off of variation.  In an automated process, the optimal number can be determined by cross-validation
+			* PLS (supervised)
+				* Derive components while simultaneously considering the corresponding response.
 * Variables/Predictors selection (adding or removing)
 	* Features extraction
 		* empirical technique for creating surrogate variables that are combinations of multiple predictors
