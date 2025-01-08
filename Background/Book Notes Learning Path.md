@@ -1,9 +1,29 @@
 - Chemical Manufacturing Process example dataset is very similar to my own data type
 ### Common Workflow
 #### 1. Data Pre-processing
-* Data transformations
-* Variables selection (adding or removing)
+* Addition or deletion of data points
+	* Removal of outliers samples and skewed variables
+	* Skewness assesment
+		* An un-skewed distribution is one that is roughly symmetric. This means that the probability of falling on either side of the distribution’s mean is roughly equal. 
+* Data transformations and combinations | Feature engineering
+	* Data encoding -> different ways to express a data, i.e. date formats
+	* Relationship between predictor and response
+		* If outcome depends on season or month, day in 365 format or month is better that month day format.
+	* Centering by subtracting the average predictor value   from all its values to obtain a zero mean
+	* Scaling the data each value of the predictor variable is divided by its standard deviation coercing the data to have a common standard deviation of one.
+* Variables/Predictors selection (adding or removing)
+	* Features extraction
+		* empirical technique for creating surrogate variables that are combinations of multiple predictors
+	* Removal of low informative variables
+	* Tree-based models are notably insensitive to the characteristics of the predictor data
+	* Linear regressions are very sensitive to predictor data
+	* Removing predictors without considering how those variables might be related to the outcome
 * Binning continuous variables
+* Types of pre-processing:
+	* Unsupervised:
+		* the outcome variable is not considered by the pre-processing techniques
+	* Supervised:
+		* the outcome is utilized by the pre-processing
 #### 2. Resampling
 * Data spending
 	* Tune a model
@@ -13,7 +33,9 @@
 * Regression -> Predicting continuous variables by
 	* Linear combination of predictors
 		* Linear regression
-		* Partial least squares 
+		* Partial least squares (PLS)
+			* are essentially supervised versions of principal component analysis (PCA)
+			* Benefited by centered and scaled data
 		* L1 regularization
 	* Not based on linear combinations of predictors
 		* Neural networks
@@ -78,7 +100,6 @@
 	* Interpolating
 		* We pick random subsets:
 			* A small test would have limited utility as a judge of performance. In this case, a sole reliance on resampling techniques (i.e.,no test set) might be more effective. 
-			* Large data sets reduce the criticality of these decisions
 
 ### Model Selection
 * Partial Least Squares
