@@ -55,8 +55,22 @@
 				* Remove as variable if
 					* The fraction of unique values over the sample size is low (say 10 %).
 					* The ratio of the frequency of the most prevalent value to the frequency of the second most prevalent value is large (say around 20).
-the second most prevalent value is large (say around 20).
+	* Adding Predictors
+		* Decompose general categorical values into more specific if possible
+		* When working with dummy variables 0/1 variables grouping samples
+			* Models that include an intercept term, such as simple linear regression, would have numerical issues if each dummy variable was included in the model because they all add up to one and this would provide the same information as the intercept. 
+				* For insensitive models, no intercept, including all dummy variables is helpful
+		* Adding transformed predictors into no linear relations
+		* Adding complex combinations of variables
 * Binning continuous variables
+	* Simplifying the data into categories that are ranges of values
+	* Commonly used in classification issues
+		* Ability to make seemingly simple statements, either for sake of having a simple decision rule or the belief that there will be a simple interpretation of the model.
+		* The modeler does not have to know the exact relationship between the predictors and the outcome.
+		* To obtain a higher response rate for survey questions where the choices are binned.
+	* There are many issues with the manual binning of continuous data.
+		* Loss of performance and precision
+		* Produce a high rate of false positives
 * Types of pre-processing:
 	* Unsupervised:
 		* the outcome variable is not considered by the pre-processing techniques
@@ -80,8 +94,11 @@ the second most prevalent value is large (say around 20).
 			* should be incorporated within the resampling if used
 			* If a variable with missing values is highly correlated with another predictor that has few missing values, a focused model can often be effective for imputation e.g. KNN
 * Correlation between predictors - Collinearity and multicollinearity.
-	* 
-	* 
+	* If in a PCA a PC has a high percentage of the variance, this can imply that there is at least one group of predictors that represent the same information.
+	* Redundant predictors frequently add more complexity to the model than information they provide to the model.
+		* Using highly correlated predictors in techniques like linear regression can result in highly unstable models, numerical errors, and degraded predictive performance. To detect it in use:
+			* For linear regression a statistic called the variance inflation factor (VIF). However  it does not determine which predictor should be removed to resolve the problem.
+			* remove the minimum number of predictors to ensure that all pairwise correlations are below a certain threshold e.g. 0.75 for sensitive models to correlation
 #### 2. Resampling
 * Data spending
 	* Tune a model
