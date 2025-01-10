@@ -14,6 +14,7 @@
 * Genes with increased translational efficiency ? Are these genes simply those with z-score > 1? 
 * Does samples cluster based on proportion of cells?
 	* Add proportion of cells in the heatmap
+* What is the error in the linear formula?
 
 ## About IA_Script1 - Cohort 1 analysis
 
