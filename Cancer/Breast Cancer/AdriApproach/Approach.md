@@ -1,4 +1,3 @@
-
 ## Objective 
 - Train a model to obtain the residuals able to explain the variance of polysome mRNA according to the cytosolic mRNA
 	- After proper preprocessing and quality control
@@ -11,8 +10,6 @@
 			- With reads in a high % of samples or in all 
 			- Only coding genes
 - Use the residuals to stratify breast cancer patients
-## Methodology
-Depends greatly on the type of data
 #### Data description
 * Response variables
 	* Polysome associated mRNA abundance - gene level (PREFERRED BY OLA)
@@ -69,3 +66,9 @@ Depends greatly on the type of data
 | Different Scales        | X                 |                                 |
 | Missing Values          |                   |                                 |
 | Sparse                  | ?                 |                                 |
+## 3. Methodology steps
+### 3.1. Pre-processing the predictor data
+### 3.2. Estimating model parameters
+### 3.3. Selecting predictors for the model
+### 3.4. Evaluating model performance
+### 3.5. Fine tuning class prediction rules (via ROC curves, etc.)

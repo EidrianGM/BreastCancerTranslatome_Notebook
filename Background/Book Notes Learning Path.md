@@ -149,7 +149,7 @@
 		* interpreted as how far, on average, the residuals are from zero
 * Classification
 
-#### Data splitting Train and Test and Model Selection
+####  Train and Test and Model Selection
 * Relationship between the number of samples (n) and number of predictors (P)
 	* High n - low P (n > P)
 		* handled by all predictive models
@@ -185,3 +185,16 @@
 	* Can be used when predictors contain moderate amounts of missing information.
 * Multiple linear regression 
 	* Cannot handle missing predictor information.
+
+### Over-Fitting
+* When the model has also learned the characteristics of each sample’s unique noise of the specific training data used.
+* Re-predicting the training set is referred to apparent performance of the model (e.g., the apparent error rate).
+
+### Model Tuning
+
+* Modern approaches to model building split the data into multiple training and testing sets, which have been shown to often find more optimal tuning parameters and give a more accurate representation of the model’s predictive performance
+* Tuning parameter is  a parameter that has no analytical formula available to calculate its appropriate value, e.g. the K-nearest neighbor
+	* Bad choices might lead to poor performance or over-fitting 
+	* There are methods based on resampling to obtain the tuning parameters
+
+#### Data Splitting

@@ -31,3 +31,7 @@
 	* But if TOP-mRNA depends on mTORC1, but its inactivation does not impact TOP-mRNA translation there is something that I missing right? 
 * "This revealed that, given that each amino acid can be decoded by several codons, expression level of tRNAs correlates with the frequency of codons in mRNAs in bacteria and unicellular eukaryotes"
 	* Is there also correlation between aminoacids usage and tRNAs expression level? 
+* The inclusion of more or less variables in a linear model allow to create a better or worse model to explain the response variable, but actually the inclusion of these can mask or force a linear relation of the translatome with the others variables.
+	* HOW CAN WE DIFFERENTIATE BETWEEN REAL LINEAR RELATION, COORDINATED TRANSCRIPTION AND TRANSLATION, WITH THE UNCORDINATED CHANGES?
+	* HOW CAN WE ASSES THE EFFECT OF VARIABLES OVER-ADJUSTING or MASKING THE LINEAR RELATION?
+
