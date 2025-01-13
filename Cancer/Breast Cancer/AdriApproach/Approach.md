@@ -72,3 +72,12 @@
 ### 3.3. Selecting predictors for the model
 ### 3.4. Evaluating model performance
 ### 3.5. Fine tuning class prediction rules (via ROC curves, etc.)
+
+## 4. Identification of Translation Dysregulated Genes
+* By Slope
+From the linear model we select genes which have an slope between 1 and 0, that is inversely correlated with the translation dysregulation. This is the close to 0 slope the more associated to translation regulation. Conversely the close to 1, the most coordinated changes between transcription and translation thus no dysregulation process is taking place.
+* By R2
+	* The model R2, which explain how well the polysome mRNA is explained by the different predictor variables, should have values ????
+* Gold Standard
+	* There should be a set of genes that can act as gold standard of coordinated changes, for example the PAM50 genes that are able to classify breast cancer patients based on transcriptome and proteome.
+
