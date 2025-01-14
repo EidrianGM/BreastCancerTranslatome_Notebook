@@ -8,7 +8,14 @@
 			- Enough genes coverage
 		- Robust genes
 			- With reads in a high % of samples or in all 
-			- Only coding genes
+			- Only coding genes ??
+				- There is evidence that lncRNAs produce micropeptides and ribosomes can also participate in mRNA decay pathways ??
+					- https://www.nature.com/articles/s41420-024-02175-0
+					- https://pmc.ncbi.nlm.nih.gov/articles/PMC8275822/
+					- https://www.science.org/content/article/dark-proteome-survey-reveals-thousands-new-human-genes
+					- https://www.cell.com/trends/cell-biology/fulltext/S0962-8924(21)00226-9
+					- https://www.nature.com/articles/nmeth0208-122b.pdf
+					- https://www.nature.com/articles/s41586-024-08015-6
 - Use the residuals to stratify breast cancer patients
 #### Data description
 * Response variables
