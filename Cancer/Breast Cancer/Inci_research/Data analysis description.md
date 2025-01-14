@@ -25,6 +25,9 @@ Inci S. Aksoylu paper -> **Transcriptome-wide alterations in mRNA translation de
 		* To human reference genome hg38
 #### Expression Matrix Analysis
 * featureCounts with Rsubread v.2.6.4; p
+	* /home/sumosome/DB/refSeq/annotation/HUMAN/GCF_000001405.40_GRCh38.p14_genomic_chr_NM.gtf'
+bamfiles <- dir(pattern='.bam$',path='.')
+counts <- featureCounts(bamfiles, isPairedEnd = F,  annot.ext='/home/sumosome/DB/refSeq/annotation/HUMAN/GCF_000001405.40_GRCh38.p14_genomic_chr_NM.gtf', isGTFAnnotationFile=TRUE, GTF.featureType='exon', GTF.attrType='gene_id', ignoreDup=FALSE, useMetaFeatures=TRUE,countMultiMappingReads=FALSE,nthreads=8 )
 	* Parameters: 
 		* isPairedEnd = allowMultiOverlap = countMultiMappingReads = FALSE
 * Filtering:
