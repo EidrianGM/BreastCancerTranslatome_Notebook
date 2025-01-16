@@ -198,3 +198,19 @@
 	* There are methods based on resampling to obtain the tuning parameters
 
 #### Data Splitting
+* The “training” data set is the general term for the samples used to create the model, while the “test” or “validation” data set is used to qualify performance.
+* When a large amount of data is at hand, a set of samples can be set aside to evaluate the final model.
+* When the number of samples is not large, a strong case can be made that a test set should be avoided because every sample may be needed for model building.
+	* Resampling methods, such as cross-validation.
+* Nonrandom approaches to splitting the data are sometimes appropriate. For example:
+	* If a model used to predict patient outcomes, the model may be created using certain patient sets (e.g., from the same clinical site or disease stage), and then tested on a different sample population to understand how well the model generalizes.
+	* In chemical modeling for drug discovery, new “chemical space” is constantly being explored. We are most interested in accurate predictions in the chemical space that is currently being investigated rather than the space that was evaluated years prior. The same could be said for spam filtering; it is more important for the model to catch the new spamming techniques rather than prior spamming schemes.
+* However, in most cases, there is the desire to make the training and test sets as homogeneous as possible. 
+	* **Simple random sampling methods can be used**
+		* When one class has a disproportionately small frequency compared to the others, there is a chance that the distribution of the outcomes may be substantially different between the training and test sets.
+	* **Stratified random sampling applies random**
+		* Sampling within subgroups. In this way, there is a higher likelihood that the outcome distributions will match. When the outcome is a number, a similar strategy can be used; the numeric values are broken into similar groups (e.g., low, medium, and high) and the randomization is executed within these groups.
+	* **Split on the basis of the predictor values**
+		* Maximum dissimilarity sampling.  Dissimilarity between two samples can be measured in a number of ways. The simplest method is to use the distance between the predictor values for two samples. If the distance is small, the points are in close proximity. Larger distances between points are indicative of dissimilarity. To use dissimilarity as a tool for data splitting, suppose the test set is initialized with a single sample. The dissimilarity between this initial sample and the unallocated samples can be calculated. The unallocated sample that is most dissimilar would then be added to the test set. To allocate more samples to the test set, a method is needed to determine the dissimilarities between groups of points.
+			* One approach is to use the average or minimum of the dissimilarities
+#### Resampling Techniques
