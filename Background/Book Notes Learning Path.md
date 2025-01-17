@@ -214,3 +214,24 @@
 		* Maximum dissimilarity sampling.  Dissimilarity between two samples can be measured in a number of ways. The simplest method is to use the distance between the predictor values for two samples. If the distance is small, the points are in close proximity. Larger distances between points are indicative of dissimilarity. To use dissimilarity as a tool for data splitting, suppose the test set is initialized with a single sample. The dissimilarity between this initial sample and the unallocated samples can be calculated. The unallocated sample that is most dissimilar would then be added to the test set. To allocate more samples to the test set, a method is needed to determine the dissimilarities between groups of points.
 			* One approach is to use the average or minimum of the dissimilarities
 #### Resampling Techniques
+* A subset of samples are used to fit a model and the remaining samples are used to estimate the efficacy of the model. This process is repeated multiple times and the results are aggregated and summarized.
+* **k-Fold Cross-Validation** (normally 10)
+	* The choice of k is usually 5 or 10, but there is no formal rule. 
+		* As k gets larger, the difference in size between the training set and the resampling subsets gets smaller. As this difference decreases, the bias of the technique becomes smaller 
+			* (i.e., the bias is smaller for k = 10 than k = 5). 
+			* In this context, the bias is the difference between the estimated and true values of performance.
+	* Uncertainty (i.e., variance or noise)
+		* An unbiased method may be estimating the correct value (e.g., the true theoretical performance) but may pay a high price in uncertainty. 
+		* This means that repeating the resampling procedure may produce a very different value (but done enough times, it will estimate the true value). k-fold cross-validation generally has high variance compared to other methods and, for this reason, might not be attractive. It should be said that for large training sets, the potential issues with variance and bias become negligible.
+	* Types
+		* Random
+			* samples are randomly partitioned into k sets of roughly equal size
+			* A model is fit using the all samples except the first subset (called the first fold)
+			* The held-out (first fold) samples are predicted by this model and used to estimate performance measures.
+		* Stratified
+			* makes the folds balanced with respect to the outcome 
+		*  leave-one-out cross-validation
+			* Only one sample is held-out at a time, the final performance is calculated from the k individual held-out predictions. 
+* **Generalized Cross-Validation - GCV (For linear regression models)**
+	* To approximate the leave-one-out error rate
+* 
