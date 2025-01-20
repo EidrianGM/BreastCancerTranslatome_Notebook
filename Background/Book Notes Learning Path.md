@@ -234,4 +234,25 @@
 			* Only one sample is held-out at a time, the final performance is calculated from the k individual held-out predictions. 
 * **Generalized Cross-Validation - GCV (For linear regression models)**
 	* To approximate the leave-one-out error rate
-* 
+* **Repeated Training/Test Splits**
+	* “leave-group-out cross-validation” or “Monte Carlo cross-validation”
+	*  splits data into modeling and prediction sets a defined number of repetitions 
+	* Resampling bias decreases as the amount of data in the subset approaches the amount in the modeling set. 
+	* A good rule of thumb is about 75–80 %. Higher proportions are a good idea if the number of repetitions is large.
+	*  Increasing the number of subsets/repetitions has the effect of decreasing the uncertainty of the performance estimates.
+	*  However, to get stable estimates of performance, it is suggested to choose a larger number of repetitions (say 50–200). This is also a function of the proportion of samples being randomly allocated to the prediction set; the larger the percentage, the more repetitions are needed to reduce the uncertainty in the performance estimates.
+* **The Bootstrap**
+	* A bootstrap sample is a random sample of the data taken with replacement 
+	* As a result, some samples will be represented multiple times in the bootstrap sample while others will not be selected at all. The samples not selected are usually referred to as the “out-of-bag” samples. For a given iteration of bootstrap resampling, a model is built on the selected samples and is used to predict the out-of-bag samples.
+	* Bootstrap error rates tend to have less uncertainty than k-fold cross-validation. 
+		* But it has a similar bias to k-fold cross-validation when k ≈ 2.
+		* If the training set size is small, this bias may be problematic, but will decrease as the training set sample size becomes larger.
+	* The “632 method”
+		* creating a performance estimate that is a combination of the simple bootstrap estimate and the estimate from re-predicting the training set
+		* The modified bootstrap estimate reduces the bias, but can be unstable with small samples sizes.
+		* This estimate can also result in unduly optimistic results when the model severely over-fits the data, since the apparent error rate will be close to zero.
+#### Choosing Final Tuning Parameters
+* The “one-standard error” method for choosing simpler models finds the nu- merically optimal value and its corresponding standard error and then seeks the simplest model whose performance is within a single standard error of the numerically best value.
+
+### Interpretation
+* When evaluating the accuracy of a model, the baseline accuracy rate to beat would be 70 % 
