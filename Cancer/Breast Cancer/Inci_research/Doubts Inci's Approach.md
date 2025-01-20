@@ -15,6 +15,7 @@
 * Does samples cluster based on proportion of cells?
 	* Add proportion of cells in the heatmap
 * What is the error in the linear formula?
+* The molecular classification of breast cancer samples in annotation file is inferred by us or is it a clinical annotation?
 
 ## About IA_Script1 - Cohort 1 analysis
 

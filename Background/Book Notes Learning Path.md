@@ -213,7 +213,6 @@
 	* **Split on the basis of the predictor values**
 		* Maximum dissimilarity sampling.  Dissimilarity between two samples can be measured in a number of ways. The simplest method is to use the distance between the predictor values for two samples. If the distance is small, the points are in close proximity. Larger distances between points are indicative of dissimilarity. To use dissimilarity as a tool for data splitting, suppose the test set is initialized with a single sample. The dissimilarity between this initial sample and the unallocated samples can be calculated. The unallocated sample that is most dissimilar would then be added to the test set. To allocate more samples to the test set, a method is needed to determine the dissimilarities between groups of points.
 			* One approach is to use the average or minimum of the dissimilarities
-#### Resampling Techniques
 * A subset of samples are used to fit a model and the remaining samples are used to estimate the efficacy of the model. This process is repeated multiple times and the results are aggregated and summarized.
 * **k-Fold Cross-Validation** (normally 10)
 	* The choice of k is usually 5 or 10, but there is no formal rule. 
@@ -251,8 +250,45 @@
 		* creating a performance estimate that is a combination of the simple bootstrap estimate and the estimate from re-predicting the training set
 		* The modified bootstrap estimate reduces the bias, but can be unstable with small samples sizes.
 		* This estimate can also result in unduly optimistic results when the model severely over-fits the data, since the apparent error rate will be close to zero.
+* Recommendations:
+	* A unique test set is a single evaluation of the model and has limited ability to characterize the uncertainty in the results.
+	* Proportionally large test sets divide the data in a way that increases bias in the performance estimates.
+	* With small sample sizes:
+		* The model may need every possible data point to adequately determine model values.
+		* The uncertainty of the test set can be considerably large to the point where different test sets may produce very different results.
+	* Resampling methods can produce reasonable predictions of how well the model will perform on future samples.
+	* No resampling method is uniformly better than another;
+		* If the samples size is small, we recommend repeated 10-fold cross-validation for several reasons: the bias and variance properties are good and, given the sample size, the computational costs are not large. 
+		* If the goal is to choose between models, as opposed to getting the best indicator of performance, a strong case can be made for using one of the bootstrap procedures since these have very low variance.
+		* For large sample sizes, the differences between resampling methods become less pronounced, and computational efficiency increases in importance. Here, simple 10-fold cross-validation should provide acceptable variance, low bias, and is relatively quick to compute.
+
 #### Choosing Final Tuning Parameters
-* The “one-standard error” method for choosing simpler models finds the nu- merically optimal value and its corresponding standard error and then seeks the simplest model whose performance is within a single standard error of the numerically best value.
+* The “one-standard error” method for choosing simpler models finds the numerically optimal value and its corresponding standard error and then seeks the simplest model whose performance is within a single standard error of the numerically best value.
+* There is a potential bias that can occur when estimating model performance during parameter tuning (variables selection).
+	* Suppose that the final model is chosen to correspond to the tuning parameter value associated with the smallest error rate. This error rate has the potential to be optimistic since it is a random quantity that is chosen from a potentially large set of tuning parameters.
+### Choosing Between Models
+* Discover the “performance ceiling”
+	1. Start with several models that are the least interpretable and most flexible, such as boosted trees or support vector machines. Across many problem domains, these models have a high likelihood of producing the empirically optimum results (i.e., most accurate).
+	2. Investigate simpler models that are less opaque (e.g., not complete black boxes), such as multivariate adaptive regression splines (MARS), partial least squares, generalized additive models, or naı̈ve Bayes models.
+	3. Consider using the simplest model that reasonably approximates the performance of the more complex methods.
 
 ### Interpretation
 * When evaluating the accuracy of a model, the baseline accuracy rate to beat would be 70 % 
+
+
+## Measuring Performance in Regression Models
+#### Quantitative Measures of Performance
+1. **The root mean squared error (RMSE)**
+	* Lower values the better
+	* The square root of the mean squared error (MSE) calculated by squaring the residuals and summing them.
+	* The value is usually interpreted as either how far (on average) the residuals are from zero or as the average distance between the observed values and the model predictions.
+2. **Coefficient of determination (R2)**
+	* Interpreted as the proportion of the information in the data that is explained by the model
+	* R2 is a measure of correlation, not accuracy
+	* R2 is dependent on the variation in the outcome
+		* At the same RMSE 
+			* R2 is proportional to the variance of the outcome/response variable
+				* Bigger variance in the response variable produce bigger R2 and low produces low 
+3.  **Rank correlation between the observed and predicted values**
+	* When the importance is the ranking position given by the model
+	* The rank correlation takes the ranks of the observed outcome values (as opposed to their actual numbers) and evaluates how close these are to ranks of the model predictions. To calculate this value, the ranks of the observed and predicted outcomes are obtained and the correlation coefficient between these ranks is calculated. This metric is commonly known as Spearman’s rank correlation.
