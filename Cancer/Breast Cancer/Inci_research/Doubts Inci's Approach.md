@@ -16,6 +16,7 @@
 	* Add proportion of cells in the heatmap
 * What is the error in the linear formula?
 * The molecular classification of breast cancer samples in annotation file is inferred by us or is it a clinical annotation?
+* Shouldn't the linear model assume that for 0 reads of total mRNA we should find 0 polysome mRNA ?
 
 ## About IA_Script1 - Cohort 1 analysis
 

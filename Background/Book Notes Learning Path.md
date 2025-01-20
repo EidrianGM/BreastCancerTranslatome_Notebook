@@ -280,7 +280,8 @@
 #### Quantitative Measures of Performance
 1. **The root mean squared error (RMSE)**
 	* Lower values the better
-	* The square root of the mean squared error (MSE) calculated by squaring the residuals and summing them.
+	* The square root of the mean squared error (MSE) 
+		* The MSE is calculated by squaring the residuals and summing them.
 	* The value is usually interpreted as either how far (on average) the residuals are from zero or as the average distance between the observed values and the model predictions.
 2. **Coefficient of determination (R2)**
 	* Interpreted as the proportion of the information in the data that is explained by the model
@@ -292,3 +293,11 @@
 3.  **Rank correlation between the observed and predicted values**
 	* When the importance is the ranking position given by the model
 	* The rank correlation takes the ranks of the observed outcome values (as opposed to their actual numbers) and evaluates how close these are to ranks of the model predictions. To calculate this value, the ranks of the observed and predicted outcomes are obtained and the correlation coefficient between these ranks is calculated. This metric is commonly known as Spearman’s rank correlation.
+#### The Variance-Bias Trade-off
+Models commonly have either high bias or high variance. It is generally true that more complex models can have very high variance, which leads to over-fitting. On the other hand, simple models tend not to over-fit, but under-fit if they are not flexible enough to model the true relationship (thus high bias).Also, highly  correlated predictors can lead to collinearity issues and this can greatly increase the model variance.
+
+If we assume that the data points are statistically independent and that the residuals have a theoretical mean of zero and a constant variance of σ2 , then
+E[MSE] = σ² + (Model Bias)² + Model Variance.
+* E is the expected value
+* σ² is usually called “irreducible noise” and cannot be eliminated by modeling.
+* The second term is the squared bias of the model. This reflects how close the functional form of the model can get to the true relationship between the predictors and the outcome.
