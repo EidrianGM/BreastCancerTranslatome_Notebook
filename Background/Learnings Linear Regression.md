@@ -43,7 +43,7 @@ Used if the correlation among predictors is high, then the ordinary least square
 * PLS
 	* **PLS finds components that maximally summarize the variation of the predictors while simultaneously requiring these components to have maximum correlation with the response.**
 	* Require the predictors to be centered and scaled
-	* Even with the constraint of corre lation with the response, it will be more naturally drawn towards predictors with large variation.
+	* Even with the constraint of correlation with the response, it will be more naturally drawn towards predictors with large variation.
 	* algorithm iteratively seeks to find underlying, or latent, relationships among the predictors which are highly correlated with the response.
 	* For a univariate response, each iteration of the algorithm assesses the relationship between the predictors (X) and response (y) and numerically summarizes this relationship with a vector of weights (w) also known as a direction;
 	* The predictor data are then orthogonally projected onto the direction to generate scores (t). 
