@@ -57,7 +57,7 @@
 	* 5. Apply linear models with covariables and obtain final model
 * Shouldn't we divide the cohort 1 into train and test datasets? We must assure that no patient is in both cohorts.
 * Shouldn't we focus only in coding genes? Currently some variables might be selected because the linear model variable produces a significant ANOVA for genes that are not coding and we are not interested in those.
-* 
+* Should CIBERSORTX have been done with only the selected genes for the model? I think not but...
 * 
 
 ## About IA_Script4 - Cell Lines analysis
