@@ -40,3 +40,10 @@
       groupSlopeP[i] <- anota2seqSlopeTest(tmpLm = tmpLm, 
         curSlope = groupSlope[i], "translation")
     }
+
+## Improvements
+* anota2seqPerformQC()
+> 	ads <- anota2seqPerformQC(Anota2seqDataSet = ads, generateSingleGenePlots = TRUE, fileName = "singleReg.pdf", fileStem = pasfiguresFolder)
+	  |--------| 100% Error: object 'pasfiguresFolder' not found
+* Control first that fileStem variable exists...
+
