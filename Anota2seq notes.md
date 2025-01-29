@@ -40,10 +40,61 @@
       groupSlopeP[i] <- anota2seqSlopeTest(tmpLm = tmpLm, 
         curSlope = groupSlope[i], "translation")
     }
-
+* In featureIntegration() -> resQuant(qvec = a2sU_eff(a2sU), a2sU = a2sU)
+	* qvec = a2sU_eff(a2sU) -> gets THE translation.apvEff from SafeQuantResults
+	* Why ?? What is it for qvec ?
+	* resOut <- resQuant(qvec = a2sU_eff(a2sU), a2sU = a2sU) 
+		* resOut -> translation.apvEff divided in background and translation directions up / down ? Why not buffering ?
+* Functions without documentation ?
+	* prepFeatures
+	* a2sU_features
+	* a2sU_eff
+	* resQuant
+	* checklmfeatGroup
+	* checklmfeatGroupColour
+	* 
 ## Improvements
+Here I will put examples of things that are not strict errors but that can be actually worth controlling just for the sake of making anota2seq and postnet more user-friendly
 * anota2seqPerformQC()
 > 	ads <- anota2seqPerformQC(Anota2seqDataSet = ads, generateSingleGenePlots = TRUE, fileName = "singleReg.pdf", fileStem = pasfiguresFolder)
 	  |--------| 100% Error: object 'pasfiguresFolder' not found
 * Control first that fileStem variable exists...
+
+
+I don't understand how comparisons works in featureIntegration.
+The documentation of ?featureIntegration states:
+`comparisons`  - Relevant for linear model only (analysis_type="lm") and if regulated genes are only considered (regOnly=TRUE). Indicate which regulation/geneList pairs should be compared. It should be provided as a list of vectors with pairs of indexes in regulation/geneList (for example list(c(0,2),c(2,4)) would indicate that the background (0) would be compared to the second and the second to the fourth mode of regulation/geneList. If both regulation and geneList are provided, geneList is appended to the end.
+
+okey so 
+0 is always all the genes in a2sU as provided by resOut <- resQuant(qvec = a2sU_eff(a2sU), a2sU = a2sU)
+
+but what are 1, 2, 3, 4, 5 ?
+
+If I do comparisons = list(c(1,2))
+1 is translationUp_c1
+2 is translationDown_c1
+
+If I do comparisons = list(c(3,4))
+coloursTmp <- c("grey75", coloursTmp)[compTmp]
+<NA> <NA> 
+  NA   NA
+listSel <- c(names(resOut[[compTmp[1]]]), names(resOut[[compTmp[2]]]))
+Error in resOut[[compTmp[1]]] : subscript out of bounds
+
+I thinks this is happening simply because for my anota2seq results 
+resOut <- resQuant(qvec = a2sU_eff(a2sU), a2sU = a2sU)
+
+is only returning 
+> names(resOut)
+[1] "background"         "translationUp_c1"   "translationDown_c1"
+
+If I do comparisons = list(c(0,2))
+0 is background
+2 is translationDown
+
+
+
+
+
+be compared to the second and the second to the fourth mode of regulation/geneList
 
