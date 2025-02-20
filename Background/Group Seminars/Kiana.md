@@ -23,7 +23,15 @@ How can we talk about percentages in different translation regulation modes, whe
 How to differentiate between batch effect and real importance in the anota2seq tables results measured in variance explained?
 Is it the dependency between anota2seqUtils variables controlled, studied, reviewed?
 
+#### 20/02/2025
 
+Targeting mRNA translation to reverse resistance to endocrine therapy
+
+Translation elgongation focus.
+
+tRNA the most heavily modified form of RNA important to maintain the dynamics of elongation.
+Dicodons can explain the different elongation translations:
+https://pmc.ncbi.nlm.nih.gov/articles/PMC10287933/
 
 
 
